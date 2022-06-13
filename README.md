@@ -16,7 +16,7 @@ I used pnpm, so be aware that npm commands may differ a little bit.
 #### Setuping the data base using [**Supabase**](https://supabase.com/) and [**Prisma**](https://www.prisma.io/)
 - Initializing prisma schema (postgresql is default provider) 
   ```bash
-    pnpx prisma install --datasource-provider	postgresql
+    pnpx prisma install --datasource-provider postgresql
   ```
 
 - Adding prisma packages to your project
@@ -48,8 +48,8 @@ I used pnpm, so be aware that npm commands may differ a little bit.
     completed Boolean
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
-    creator   User     @relation(fields: createdId, references: [id])
-    createdId Int
+    creator   User     @relation(fields: creatorId, references: [id])
+    creatorId Int
   }
 
   enum Role {
